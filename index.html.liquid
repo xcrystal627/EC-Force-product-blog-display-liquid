@@ -1,0 +1,529 @@
+{{ 'shop/base' | javascript_include_tag }}
+
+<main class="l-container js-main-container" role="main" id="add_product_async_view">
+        <section>
+            <div class="relative">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper main-swiper h-[500px] md:h-screen ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ">
+                            <div class="w-full h-full bg-center bg-no-repeat bg-cover relative">
+                                <div class="absolute w-full h-full">
+                                    <img src="{{file_root_path }}/img/slide-img-1.jpg" class="object-center object-cover w-full h-full " alt="">
+                                </div>
+                                <div class="before:absolute before:inset-0  before:w-full before:h-full before:bg-[#00000080]"></div>
+                                <div class="absolute max-w-[800px] w-4/5  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center">
+                                    <p class="text-white mb-1 text-[14px] md:text-[16px]">阿波ツクヨミファーム</p>
+                                    <h2 class="text-white mb-2 text-[32px] md:text-[40px] font-extrabold">AWA TSUKUYOMI FARM</h2>
+                                    <a href="/shop/products/daidai-set" class="bg-[#fcfcfc] text-[#174733]  inline-block min-w-[280px] text-center my-4 px-4 py-2 text-[16px]">ツクヨミの野菜セットを見てみる</a>
+                                    <p class="text-white text-[16px] mt-4">誰も諦める必要の無い社会、誰もが挑戦し続けられる社会をInterbeingな農業に構造転換することで、農業の課題の根本解決を目指しています。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full bg-center bg-no-repeat bg-cover relative">
+                                <div class="absolute w-full h-full">
+                                    <img src="{{file_root_path }}/img/slide-img-2.jpg" class="object-center object-cover w-full h-full " alt="">
+                                </div>
+                                <div class="before:absolute before:inset-0  before:w-full before:h-full before:bg-[#00000080]"></div>
+                                <div class="absolute max-w-[800px] text-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 ">
+                                    <h2 class="text-white mb-2 text-[32px] uppercase md:text-[40px] font-extrabold">hello！ food chengers.</h2>
+                                    <a href="/shop/products/" class="bg-[#fcfcfc] text-[#174733] inline-block min-w-[280px] text-center my-4 px-4 py-2 text-[16px]">詳しく見る</a>
+                                    <p class="text-white text-[16px] mt-4">農業は総炭素排出量の３０％、淡水使用量の７０％、生物多様性の損失の６０％の要因を占めています。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-full h-full bg-center bg-no-repeat bg-cover relative">
+                                <div class="absolute w-full h-full">
+                                    <img src="{{file_root_path }}/img/slide-img-3.jpg" class="object-center object-cover w-full h-full " alt="">
+                                </div>
+                                <div class="before:absolute before:inset-0  before:w-full before:h-full before:bg-[#00000080]"></div>
+                                <div class="absolute max-w-[1200px]  pb-[50px] sm:pb-[100px] bottom-0 left-10 right-10 md:left-40 md:right-40">
+                                    <h2 class="text-white mb-2 text-[32px] uppercase md:text-[40px] font-extrabold">Our Credo</h2>
+                                    <p class="text-white text-[24px] font-bold mt-2">Be the change</p>
+                                    <p class="text-white text-[16px] mt-2">私たちが望む変化そのものを体現しよう。</p>
+                                    <p class="text-white text-[24px] font-bold mt-2">Communicate the change</p>
+                                    <p class="text-white text-[16px] mt-2">変化や望む世界について、様々な形でみんなとコミュニケーションしていこう。</p>
+                                    <p class="text-white text-[24px] font-bold mt-2">Organize</p>
+                                    <p class="text-white text-[16px] mt-2">様々な人達と連携・協力しあって、より大きなものを、変化を引き起こしていこう。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-10 swiper-pagination absolute text-white"></div>
+            </div>
+        </section>
+        <section class="flex justify-center my-[20px] md:my-[40px]">
+            <form action="/shop/search" method="get">
+                <div class="flex justify-start items-center bg-white border-[#174733] border rounded-[20px] p-[2px]">
+                    <svg class="mx-[5px] text-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve">
+                        <defs></defs>
+                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                            <path class="fill-[#174733]" d="M 88.535 81.465 L 65.846 58.776 c 10.891 -14.351 9.801 -34.954 -3.288 -48.043 C 55.638 3.812 46.435 0 36.646 0 c -9.789 0 -18.992 3.812 -25.913 10.733 S 0 26.857 0 36.646 c 0 9.788 3.812 18.991 10.733 25.912 c 7.144 7.145 16.528 10.717 25.913 10.717 c 7.808 0 15.612 -2.482 22.13 -7.429 l 22.689 22.689 C 82.44 89.512 83.721 90 85 90 s 2.56 -0.488 3.535 -1.465 C 90.488 86.583 90.488 83.417 88.535 81.465 z M 17.805 55.488 C 12.771 50.455 10 43.764 10 36.646 c 0 -7.118 2.771 -13.809 7.805 -18.842 C 22.837 12.771 29.529 10 36.646 10 c 7.117 0 13.809 2.771 18.842 7.805 c 10.389 10.389 10.389 27.294 0 37.684 C 45.098 65.878 28.193 65.876 17.805 55.488 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        </g>
+                    </svg>
+                    <input type="search" name="q[freeword]" class="bg-transparent outline-none rounded-md w-[250px] sm:w-[450px] py-[3px] text-[#174733] text-[14px] sm:text-[18px]" maxlength="1000" placeholder="すべての商品から探す">
+                    <input type="submit" hidden />
+                </div>
+            </form>
+        </section>
+        
+        <section class="mt-[40px] md:mt-[80px] mx-[20px] md:mx-[40px] lg:mx-[160px] bg-[#e3ede1] flex justify-center ">
+            <div class=" p-[10px] md:p-[40px] lg:p-[80px]  text-center text-neutral-700 max-w-[1200px] ">
+                <p class="text-[16px]">＼ ツクヨミが初めての方におすすめ！ ／</p>
+                <h2 class="text-[28px] md:text-[40px] my-6 font-bold">新鮮な旬のお野菜セット</h2>
+                <p class="text-[16px] leading-[30px]"> <strong>『 橙 ‐だいだい‐ ツクヨミお野菜セット 』は、お野菜の旬に応じてセット内容が変わります。阿波ツクヨミファームと厳選農家の特選野菜たちです。<br/>江戸時代から伝わる農法で育ったお野菜を、ぜひ味わってみてください。</strong></p>
+            </div>
+        </section>
+
+        <section class="mt-[40px] md:mt-[80px] px-[20px] md:px-[40px]  lg:mx-auto max-lg:mx-[auto] ">
+            <div class=" lg:mx-auto  px-0 sm:px-[20px]  max-w-[1200px] ">
+                <h2 class=" text-[16px] md:text-[32px]  font-bold text-[#174733] text-center">【 橙 ‐だいだい‐ 】ツクヨミお任せ野菜セット 彌榮（農薬不使用・自然農）</h2>
+                <div class="my-[20px] md:my-[40px] flex justify-center relative">
+                    <div class="relative inline-block">
+                        <img class="w-full h-full max-w-[500px] max-h-[500px]" src="{{ file_root_path }}/img/slide-vegetable.jpg" alt="vegetables">
+                        <div class="ribbon-price text-[white]">¥1,500</div>
+                    </div>
+                </div>
+                <div class="my-4  text-neutral-700 text-center">
+                    <p class="my-2 text-[16px]">ツクヨミファームの野菜セットは植物性有機物・堆肥を利用した農薬不使用有機栽培、または自然栽培のものです。(有機肥料・動物性有機物・堆肥は利用しておりません。）</p>
+                    <p class="my-2 text-[16px] leading-8">オンラインショップ内では特別栽培農産物も販売しております。農薬不使用の農産物の内容の追加は、栽培期間中化学農薬化学肥料不使用のカテゴリーよりお選びください。</p>
+                    <p class="my-2 text-[16px]">セット内容例はこちらのお客様のお写真を参考下さい。</p>
+                    <a class="my-2 text-[#174733] text-[12px] " href="https://www.instagram.com/tsukuyomi_farm/tagged/">https://www.instagram.com/tsukuyomi_farm/tagged/</a>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+                
+        <section class="mt-[40px] md:mt-[80px] py-[20px] md:py-[40px]  px-[20px] md:px-[40px] lg:px-[auto] bg-yellow-50">
+            <div class="mx-[20px] md:mx-[40px]  lg:mx-auto  px-0 sm:px-[20px]  max-w-[1200px]">
+                <div class='flex justify-between items-center'>
+                    <h3 class="text-[18px] md:text-[24px] my-4 text-[#174733] font-bold">全ての商品</h3>
+                    <a class='text-[12px] text-[#386e0f] underline' href='/shop/products'>すべてを見る</a>
+                </div>
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper product-swiper ">
+                    <div class="swiper-wrapper">
+                        {% for product in products %}
+                        
+                        {% assign is_new = false %}
+                            {% if product.variants.size > 1 %}
+                            {% for variant in product.variants %}
+                                {% if variant.is_new %}
+                                {% assign is_new = true %}
+                                {% endif %}
+                            {% endfor %}
+                            {% else %}
+                            {% if product.master.is_new %}
+                                {% assign is_new = true %}
+                            {% endif %}
+                            {% endif %}
+            
+                            {% assign is_sold = false %}
+                            {% unless product.master.stock_item.stock_unlimited %}
+            
+                            {% assign stock = 0 %}
+                            {% if product.variants.size > 1 %}
+                                {% for variant in product.variants %}
+                                {% assign stock = stock | plus: variant.stock_item.stock %}
+                                {% endfor %}
+                            {% else %}
+                                {% assign stock = stock | plus: product.master.stock_item.stock %}
+                            {% endif %}
+            
+                            {% if stock < 1 %}
+                                {% assign is_sold = true %}
+                            {% endif %}
+            
+                            {% endunless %}
+                        
+                            <div class="swiper-slide  bg-white shadow-lg group relative">
+                                <a href="/shop/products/{{ product.master.sku }}">
+                                    <figure class=" flex justify-center items-center w-full h-[250px]  md:h-[150px] overflow-hidden ">
+                                        {% if product.thumbnail.url %}
+                                            {% assign thumbnail = product.thumbnail.url %}
+                                        {% else %}
+                                            {% assign thumbnail = 'missing' | image_url %}
+                                        {% endif %}
+                                        <img class="group-hover:scale-110 transition-all duration-300 w-full h-auto" src="{{thumbnail}}" alt="">
+                                        {% if is_new or is_sold %}
+                                        {% if is_new %}
+                                            <span class="absolute top-[10px] right-[10px] text-[11px] rounded-2xl py-[3px] px-[6px] text-white bg-[#43a81b]">
+                                            {{ 'products.general.new.value' | t }}
+                                            </span>
+                                        {% endif %}
+                    
+                                        {% if is_sold %}
+                                            <span class="absolute top-[10px] right-[10px] text-[11px] rounded-2xl py-[3px] px-[6px] text-white bg-[#f03c69]">
+                                            {{ 'products.stock.sold_out.value' | t }}
+                                            </span>
+                                        {% endif %}
+                                        {% endif %}
+                                    </figure>
+                                    <div class="p-4 text-neutral-700 text-[12px] md:text-[16px] text-center">
+                                        <h3 class="mt-[5px] text-[14px] md:text-[16px] font-bold text-[#174733] h-[44px] md:h-[50px]  line-clamp-2">
+                                            {{ product.name }}
+                                        </h3>
+                                        <p  class="mt-[10px] text-[#386e0f] text-[12px] md:text-[14px]>
+                                        {% if product.set.set_sale_method_product_price? %}
+                                            {% if product.master.list_price > product.set.lowest_price %}
+                                            <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                                            <span class="sale u-color__text--alert">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                                            <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                            <span id="sale u-color__text--alert">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                                            <span>)</span>
+                                            {% else %}
+                                            <span class="price">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                                            <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                            <span id="price">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                                            <span>)</span>
+                                            {% endif %}
+                                        {% elsif product.master.list_price > product.first_price %}
+                                            <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                                            <span class="sale u-color__text--alert">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                                            <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                            <span id="sale u-color__text--alert">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                                            <span>)</span>
+                                        {% else %}
+                                            <span class="price">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                                            <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                            <span id="price">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                                            <span>)</span>
+                                        {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                    {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-[20px] md:mt-[40px] px-[20px] md:px-[40px] lg:px-[auto]  bg-white">
+            <div class="md:mx-[40px] lg:mx-auto  px-0 sm:px-[20px] max-w-[1200px]">
+                <div class='flex justify-between items-center'>
+                    <h3 class="text-[18px] md:text-[24px] my-4 text-[#174733] font-bold">化学農薬化学肥料不使用</h3>
+                    <a class='text-[12px] text-[#386e0f] underline' href='/shop/product_categories/no-fertilizer'>すべてを見る</a>
+                </div>
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper product-swiper ">
+                    <div class="swiper-wrapper">
+                        {% for product in products %}
+                            {% for category in product.product_categories %}
+                                {% if category.slug == "no-fertilizer"%}
+                                    {% assign is_new = false %}
+                                  {% if product.variants.size > 1 %}
+                                    {% for variant in product.variants %}
+                                      {% if variant.is_new %}
+                                        {% assign is_new = true %}
+                                      {% endif %}
+                                    {% endfor %}
+                                  {% else %}
+                                    {% if product.master.is_new %}
+                                      {% assign is_new = true %}
+                                    {% endif %}
+                                  {% endif %}
+                    
+                                  {% assign is_sold = false %}
+                                  {% unless product.master.stock_item.stock_unlimited %}
+                    
+                                    {% assign stock = 0 %}
+                                    {% if product.variants.size > 1 %}
+                                      {% for variant in product.variants %}
+                                        {% assign stock = stock | plus: variant.stock_item.stock %}
+                                      {% endfor %}
+                                    {% else %}
+                                      {% assign stock = stock | plus: product.master.stock_item.stock %}
+                                    {% endif %}
+                    
+                                    {% if stock < 1 %}
+                                      {% assign is_sold = true %}
+                                    {% endif %}
+                    
+                                  {% endunless %}
+                                
+                                    <div class="swiper-slide bg-yellow-50 shadow-lg group relative">
+                                        <a href="/shop/products/{{ product.master.sku }}">
+                                            <figure class=" flex justify-center items-center w-full h-[250px]  md:h-[150px] overflow-hidden ">
+                                                {% if product.thumbnail.url %}
+                                                    {% assign thumbnail = product.thumbnail.url %}
+                                                {% else %}
+                                                    {% assign thumbnail = 'missing' | image_url %}
+                                                {% endif %}
+                                                <img class="group-hover:scale-110 transition-all duration-300 w-full h-auto" src="{{thumbnail}}" alt="">
+                                                {% if is_new or is_sold %}
+                                                {% if is_new %}
+                                                  <span class="absolute top-[10px] right-[10px] text-[11px] rounded-2xl py-[3px] px-[6px] text-white bg-[#43a81b]">
+                                                    {{ 'products.general.new.value' | t }}
+                                                  </span>
+                                                {% endif %}
+                            
+                                                {% if is_sold %}
+                                                  <span class="absolute top-[10px] right-[10px] text-[11px] rounded-2xl py-[3px] px-[6px] text-white bg-[#f03c69]">
+                                                    {{ 'products.stock.sold_out.value' | t }}
+                                                  </span>
+                                                {% endif %}
+                                              {% endif %}
+                                            </figure>
+                                            <div class="p-4 text-neutral-700 text-[12px] md:text-[16px] text-center">
+                                                <h3 class="mt-[5px] text-[14px] md:text-[16px] font-bold text-[#174733] h-[44px] md:h-[50px]  line-clamp-2">
+                                                  {{ product.name }}
+                                                </h3>
+                                                <p  class="mt-[10px] text-[#386e0f] text-[12px] md:text-[14px]>
+                                                {% if product.set.set_sale_method_product_price? %}
+                                                  {% if product.master.list_price > product.set.lowest_price %}
+                                                    <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                                                    <span class="sale u-color__text--alert">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                                                    <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                                    <span id="sale u-color__text--alert">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                                                    <span>)</span>
+                                                  {% else %}
+                                                    <span class="price">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                                                    <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                                    <span id="price">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                                                    <span>)</span>
+                                                  {% endif %}
+                                                {% elsif product.master.list_price > product.first_price %}
+                                                  <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                                                  <span class="sale u-color__text--alert">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                                                  <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                                  <span id="sale u-color__text--alert">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                                                  <span>)</span>
+                                                {% else %}
+                                                  <span class="price">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                                                  <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                                                  <span id="price">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                                                  <span>)</span>
+                                                {% endif %}
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{products_all}}
+        <section class="mt-[40px] md:mt-[80px] py-[20px] md:py-[40px] bg-yellow-50">
+            <div class="mx-[20px] md:mx-[40px]  lg:mx-auto  px-0 sm:px-[20px]  max-w-[1200px]">
+                <div class='flex justify-between items-center'>
+                    <h3 class="text-[18px] md:text-[24px] my-4 text-[#174733] font-bold">全てのカテゴリー</h3>
+                    <a class='text-[12px] text-[#386e0f] underline' href='/shop/product_categories'>すべてを見る</a>
+                </div>
+              {% if product_categories.size == 0 %}
+                <header class="p-page_header">
+                  <div class="p-page_header__inner">
+                    <h1 class="p-page_header__inner__title u-text--head">{{ 'product_categories.general.categories.value' | t }}</h1>
+                  </div>
+                </header>
+                <div class="l-container__row u-margin__top--60">
+                  <p class="u-text--body" style="text-align: center;">{{ 'product_categories.general.empty.value' | t }}</p>
+                </div>
+              {% else %}
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper product-swiper ">
+                    <div class="swiper-wrapper">
+                        {% for category in product_categories %}
+
+                        <div class="swiper-slide bg-white  shadow-lg">
+                            <a href="">
+                                <div class="flex justify-center items-center w-full h-[250px] md:h-[150px] overflow-y-hidden">
+                                    {% if category.thumbnail.url %}
+                                        {% assign thumbnail = category.thumbnail.url %}
+                                    {% else %}
+                                        {% assign thumbnail = 'missing' | image_url %}
+                                    {% endif %}
+                                    <img class="w-full h-auto" src="{{ thumbnail }}" alt="{{category.name}}">
+                                </div>
+                                <div class="p-4 text-neutral-700 text-[12px] md:text-[16px] text-center">
+                                    <p class="limit-line-three">{{category.name}}</p>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <section class="mt-[40px] md:mt-[40px] px-[20px] md:px-[40px] lg:px-[auto]  bg-white">
+            <div class=" md:mx-[40px] lg:mx-auto  px-0 sm:px-[20px] max-w-[1200px]">
+                <p class="my-4  text-[#174733] text-[12px] md:text-[16px] text-center ">阿波ツクヨミファームってどんな農家？</p>
+                <h2 class="my-4  text-[#174733] text-[14px] md:text-[28px] text-center font-bold">ツクヨミの
+                    <span class="font-bolder text-[20px] md:text-[40px]">5</span>つ の取り組み</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="group relative w-full h-[300px] grid-cols-1">
+                        <div class="absolute w-full h-full">
+                            <img src="{{ file_root_path }}/img/initiative-01.jpg" class="w-full h-full object-cover" alt="">
+                            <div class="before:absolute before:inset-0  before:transition before:ease-in-out before:duration-300  group-hover:before:bg-[rgba(0,0,0,0.6)] "></div>
+                        </div>
+                        <div class="transition ease-in-out duration-300 absolute w-[250px] p-4 bg-[white] text-[#174733] text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                            <p class=" text-[12px] md:text-[16px] my-2">
+                                生物にも環境にもやさしい
+                            </p>
+                            <h4 class=" text-[18px] md:text-[22px] font-bold my-2">
+                                不耕起自然栽培
+                            </h4>
+                            <a href="/shop/information/regenerative-agriculture" class="inline-block bg-[#174733] text-white px-4 py-2  my-2">
+                                    どんな栽培なの?
+                                </a>
+                        </div>
+                    </div>
+                    <div class="group relative w-full h-[300px] col-span-1">
+                        <div class="absolute w-full h-full">
+                            <img src="{{ file_root_path }}/img/initiative-02.jpg" class="w-full h-full object-cover" alt="">
+                            <div class="before:absolute before:inset-0  before:transition before:ease-in-out before:duration-300  group-hover:before:bg-[rgba(0,0,0,0.6)] "></div>
+                        </div>
+                        <div class="transition ease-in-out duration-300 absolute w-[250px] p-4 bg-[white] text-[#174733] text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                            <p class=" text-[12px] md:text-[16px] my-2">
+                                野菜が毎日食べられる仕組み
+                            </p>
+                            <h4 class=" text-[18px] md:text-[22px] font-bold my-2">
+                                流通の改革
+                            </h4>
+                            <a href="/shop/products/daidai-set" class="inline-block bg-[#174733] text-white px-4 py-2  my-2 ">
+                                    やさしい価格の理由
+                                </a>
+                        </div>
+                    </div>
+                    <div class="group relative w-full h-[300px]">
+                        <div class="absolute w-full h-full">
+                            <img src="{{ file_root_path }}/img/initiative-03.jpg" class="w-full h-full object-cover" alt="">
+                            <div class="before:absolute before:inset-0  before:transition before:ease-in-out before:duration-300  group-hover:before:bg-[rgba(0,0,0,0.6)] "></div>
+                        </div>
+                        <div class="transition ease-in-out duration-300 absolute w-[250px] p-4 bg-[white] text-[#174733] text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                            <p class=" text-[12px] md:text-[16px] my-2">
+                                吉野川がつくった豊かな土地
+                            </p>
+                            <h4 class=" text-[18px] md:text-[22px] font-bold my-2">
+                                農地に適した気候
+                            </h4>
+                            <a href="/shop/information/cultivation-environment" class="inline-block bg-[#174733] text-white px-4 py-2  my-2">
+                                栽培環境を知る
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group relative w-full h-[300px]">
+                        <div class="absolute w-full h-full">
+                            <img src="{{ file_root_path }}/img/initiative-04.jpg" class="w-full h-full object-cover" alt="">
+                            <div class="before:absolute before:inset-0  before:transition before:ease-in-out before:duration-300  group-hover:before:bg-[rgba(0,0,0,0.6)] "></div>
+                        </div>
+                        <div class="transition ease-in-out duration-300 absolute w-[250px] p-4 bg-[white] text-[#174733] text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                            <p class=" text-[12px] md:text-[16px] my-2">
+                                いつも旬の味が届く
+                            </p>
+                            <h4 class=" text-[18px] md:text-[22px] font-bold my-2">
+                                お野菜セット
+                            </h4>
+                            <a href="/shop/products/daidai-set" class="inline-block bg-[#174733] text-white px-4 py-2  my-2">
+                                オススメを見てみる
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group relative w-full h-[300px]">
+                        <div class="absolute w-full h-full">
+                            <img src="{{ file_root_path }}/img/initiative-05.jpg" class="w-full h-full object-cover" alt="">
+                            <div class="before:absolute before:inset-0  before:transition before:ease-in-out before:duration-300  group-hover:before:bg-[rgba(0,0,0,0.6)] "></div>
+                        </div>
+                        <div class="transition ease-in-out duration-300 absolute w-[250px] p-4 bg-[white] text-[#174733] text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                            <p class=" text-[12px] md:text-[16px] my-2">
+                                安全であることは前提
+                            </p>
+                            <h4 class=" text-[18px] md:text-[22px] font-bold my-2">
+                                古代種も、交配種も
+                            </h4>
+                            <a href="/shop/information/variety" class="inline-block bg-[#174733] text-white px-4 py-2  my-2">
+                                    野菜の種について知る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section class="mt-[40px] md:mt-[80px] py-[20px] md:py-[40px] bg-yellow-50 ">
+            <div class="mx-[20px] md:mx-[40px] lg:mx-auto px-0 sm:px-[20px] max-w-[1200px] ">
+                <div class="block lg:flex justify-center items-center gap-6 ">
+                    <div class="w-full lg:w-1/2 text-center ">
+                        <p class="text-[14px] md:text-[18px] my-4 text-[#174733] ">
+                            古くて新しい農業、 はじめよう!
+                        </p>
+                        <p class="text-[14px] md:text-[18px] my-4 text-[#174733] font-bold ">
+                            【研修体験農業プログラム】
+                        </p>
+                        <p class="text-[14px] md:text-[18px] my-4 text-[#174733] ">
+                            阿波ツクヨミファームでは、<br> <span class="font-bold "> 滞在費無料</span>の研修・体験農業プログラムを行っています。
+                        </p>
+                        <p class="text-[14px] md:text-[18px] my-4 text-[#174733] ">
+                            完全農薬不使用の農業方法を体験してみませんか?
+                        </p>
+                        <a href="/shop/pages/agriculture-experience" class="inline-block bg-[#174733] text-white px-4 py-2 my-2 transition duration-150 hover:bg-[#0b3d29] ">
+                            プログラム詳細はこちら
+                        </a>
+                    </div>
+                    <div class="w-full mt-6 lg:mt-0 lg:w-1/2 ">
+                        <img src="{{ file_root_path }}/img/we.jpg " alt=" ">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-[40px] md:mt-[40px] px-[20px] md:px-[40px] lg:px-[auto]  bg-white">
+            <div class=" md:mx-[40px] lg:mx-auto  px-0 sm:px-[20px] max-w-[1200px]">
+                <h3 class="text-[18px] md:text-[24px]  my-4 text-[#174733] font-bold">
+                    BLOG
+                </h3>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                    {% assign article_count = 0 %}
+                    {% for article in informations %}
+
+                        {% if article.information_category.slug == 'magazines' %}
+                            {% assign article_count = article_count | plus: 1 %}
+                            {% if article_count < 4 %}
+                                
+                                <article class="w-full bg-yellow-50 shadow-lg">
+                                    <div class="flex justify-center items-center">
+                                        {% if article.thumbnail.url %}
+                                        <img src="{{ article.thumbnail.url }}" alt=""> {% else %}
+                                        <img src="{{ article.thumbnail.url }}" alt=""> {% endif %}
+                                    </div>
+                                    <div class="p-4">
+                                        <a href="/shop/information/{{ article.slug }}">
+                                            <h4 class="text-[16px] md:text-[18px]  h-[44px] md:h-[50px]  line-clamp-2 my-4 text-[#174733] font-bold">
+                                                {{ article.title }}
+                                            </h4>
+                                            <p class="text-[16px]  my-4 text-[#174733] flex justify-end">
+                                                <time>{{ article.published_at | date: '%Y.%m.%d' }}</time>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </article>
+                            {% endif %}
+                        {% endif %}
+    
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+        <section class="my-[40px] md:mt-[40px] px-[20px] md:px-[40px] lg:px-[auto]" data-url="https://www.youtube.com/embed/GqTfuEiy7Kc" data-id="GqTfuEiy7Kc">
+            <div class=" md:mx-[40px] lg:mx-auto  px-0 sm:px-[20px] max-w-[1200px]">
+                <h3 class="text-[18px] md:text-[24px]  my-4 text-[#174733] font-bold">
+                    ABOUT
+                </h3>
+                <div class="w-full flex justify-center">
+                    <iframe id="ytplayer-240ed85af33340ba313d7ddd1e636bc7" class="ytplayer" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="640" height="360" src="https://www.youtube.com/embed/GqTfuEiy7Kc?enablejsapi=1&autoplay=1&loop=1&modestbranding=1&playsinline=1&start=1&disablekb=1&fs=0&showinfo=0&rel=0&mute=1&playlist=GqTfuEiy7Kc&controls=1"></iframe>
+                </div>
+            </div>
+        </section>
+</main>
